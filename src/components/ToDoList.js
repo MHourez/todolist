@@ -1,12 +1,23 @@
 import ToDoItem from "./ToDoItem";
 import EditToDo from "./EditToDo";
 
-function ToDoList({ todoList, deleteToDo, toggleToDo, toggleEditToDo }) {
+function ToDoList({
+  todoList,
+  deleteToDo,
+  toggleToDo,
+  toggleEditToDo,
+  editToDo,
+}) {
   return todoList.length ? (
     <ul>
       {todoList.map((todo) =>
         todo.edit ? (
-          <EditToDo key={todo.id} todo={todo} />
+          <EditToDo
+            key={todo.id}
+            todo={todo}
+            editToDo={(content) => editToDo(todo.id, content)}
+            cancelEditToDo={() => toggleEditToDo(todo.id)}
+          />
         ) : (
           <ToDoItem
             key={todo.id}
