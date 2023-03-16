@@ -7,6 +7,7 @@ function ToDoList({
   toggleToDo,
   toggleEditToDo,
   editToDo,
+  selectToDo,
 }) {
   return todoList.length ? (
     <ul>
@@ -25,6 +26,7 @@ function ToDoList({
             deleteToDo={() => deleteToDo(todo.id)}
             toggleToDo={() => toggleToDo(todo.id)}
             editToDo={() => toggleEditToDo(todo.id)}
+            selectToDo={() => selectToDo(todo.id)}
           />
         )
       )}
