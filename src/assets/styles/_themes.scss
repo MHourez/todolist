@@ -12,6 +12,11 @@
   border: 1px solid var(--primary);
   color: white;
 }
+.btn-secondary {
+  background-color: blue;
+  border: 1px solid blue;
+  color: white;
+}
 .btn-reverse-primary {
   border: 2px solid var(--primary);
   background-color: white;
